@@ -65,6 +65,7 @@ a {
 
 .navigation ul.nav-links .link:hover:before {
   width: 80%;
+  background-color: #970017;
 }
 
 .banner {
@@ -76,6 +77,10 @@ a {
   font-size: 10em;
   font-weight: 700;
   margin-bottom: 40px;
+}
+
+.banner .headline p span.colour {
+  color: #970017;
 }
 
 .banner .text {
@@ -108,5 +113,24 @@ a {
     -webkit-transform: rotate(1turn);
             transform: rotate(1turn);
   }
+}
+
+.about {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about p {
+  font-size: 50px;
+  position: relative;
+}
+
+.about p:before {
+  content: "";
+  width: 10%;
+  height: 5px;
+  background-color: #970017;
+  position: absolute;
+  bottom: -2px;
 }
 /*# sourceMappingURL=styles.css.map */
