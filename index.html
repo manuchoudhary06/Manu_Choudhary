@@ -13,44 +13,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navigation">
-      <a href="#" class="logo">
-        <header class="name">
-          <h1>Manu Choudhary</h1>
-        </header>
-      </a>
-      <ul class="nav-links">
-        <li class="link"><a href="#">About</a></li>
-        <li class="link"><a href="#">Projects</a></li>
-        <li class="link"><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- Banner Section -->
-    <section class="banner">
-      <div class="headline">
-        <p> <span class="colour">F</span>rontend </p>
-        <p> &nbsp; <span class="colour">D</span>eveloper</p>
+  <nav class="navigation">
+    <a href="#" class="logo">
+      <header class="name">
+        <h1>Manu Choudhary</h1>
+      </header>
+    </a>
+    <ul class="nav-links">
+      <li class="link"><a href="#">About</a></li>
+      <li class="link"><a href="#">Projects</a></li>
+      <li class="link"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="headline">
+      <p> <span class="colour">F</span>rontend </p>
+      <p> &nbsp; <span class="colour">D</span>eveloper</p>
+    </div>
+    <svg id="rotatingText" viewBox="0 0 200 200" width="130" height="300">
+      <defs>
+        <path id="circle" d="M 100, 100
+                  m -75, 0
+                  a 75, 75 0 1, 0 150, 0
+                  a 75, 75 0 1, 0 -150, 0
+                  ">
+        </path>
+      </defs>
+      <text width="400">
+        <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+          Scroll Down Scroll Down
+        </textPath>
+      </text>
+    </svg>
+  </section>
+  <!-- About Section -->
+  <section class="about">
+    <p>About Me</p>
+    <p class="sub">Innovation Meets Imagination in Front-End Wizardry!</p>
+    <div class="experience-time">
+    </div>
+    <div class="desc-section">
+      <div class="description">
       </div>
-      <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
-        <defs>
-          <path id="circle" d="M 100, 100
-                    m -75, 0
-                    a 75, 75 0 1, 0 150, 0
-                    a 75, 75 0 1, 0 -150, 0
-                    ">
-          </path>
-        </defs>
-        <text width="400">
-          <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-            Scroll Down Scroll Down
-          </textPath>
-        </text>
-      </svg>
-    </section>
-    <!-- About Section -->
-    
-    <section class="about">
-      <p>About Me</p>
-    </section>
+      <div class="skills"></div>
+    </div>
+  </section>
+  <script src="./index.js"></script>
 </body>
 </html>
