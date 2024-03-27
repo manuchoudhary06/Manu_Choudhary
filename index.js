@@ -64,3 +64,43 @@ function interpolateColor(percent) {
 
   return `rgb(${interpolatedColor.join(",")})`;
 }
+
+//Cursor-trail
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cursorTrail = document.querySelector(".cursor-trail");
+  const cursorRing = document.createElement("div");
+  cursorRing.classList.add("cursor-ring");
+  cursorTrail.appendChild(cursorRing);
+
+  function updateCursorPosition(event) {
+    const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    cursorTrail.style.left = event.clientX + scrollX + "px";
+    cursorTrail.style.top = event.clientY + scrollY + "px";
+
+    // Add delay before updating cursor ring position
+    setTimeout(function () {
+      cursorRing.style.transform = `translate(-50%, -50%) translate(${
+        event.clientX + scrollX
+      }px, ${event.clientY + scrollY}px)`;
+    }, 200); // Adjust delay time in milliseconds
+  }
+
+  document.addEventListener("mousemove", updateCursorPosition);
+
+  // Update cursor position on scroll
+  document.addEventListener("scroll", function (event) {
+    updateCursorPosition(event);
+  });
+
+  // Remove cursor ring when leaving the page
+  document.addEventListener("mouseleave", function () {
+    cursorRing.style.transform =
+      "translate(-50%, -50%) translate(-9999px, -9999px)";
+  });
+
+  // Show cursor on entire body
+  document.body.style.cursor = "none";
+});

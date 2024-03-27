@@ -1,108 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manu Choudhary Portfolio</title>
     <!-- Google Font API -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav class="navigation">
-    <a href="#" class="logo">
-      <header class="name">
-        <h1>Manu Choudhary</h1>
-      </header>
-    </a>
-    <ul class="nav-links">
-      <li class="link"><a href="#about">About</a></li>
-      <li class="link"><a href="#">Projects</a></li>
-      <li class="link"><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Banner Section -->
-  <section class="banner">
-    <div class="headline">
-      <p> <span class="colour">F</span>rontend </p>
-      <p> &nbsp; <span class="colour">D</span>eveloper</p>
-    </div>
-    <svg id="rotatingText" viewBox="0 0 200 200" width="130" height="300">
-      <defs>
-        <path id="circle" d="M 100, 100
-                  m -75, 0
-                  a 75, 75 0 1, 0 150, 0
-                  a 75, 75 0 1, 0 -150, 0
-                  ">
-        </path>
-      </defs>
-      <text width="400">
-        <textPath alignment-baseline="top" xlink:href="#circle" class="text">
-          Scroll Down Scroll Down
-        </textPath>
-      </text>
-    </svg>
-  </section>
-  <!-- About Section -->
-  <section class="about" id="about">
-    <p class="section-heading">About Me</p>
-    <p class="sub">Innovation Meets Imagination in Front-End Wizardry!</p>
-    <div class="experience-time"></div>
-    <div class="desc-section">
-      <div class="grid-item">
-        <p class="quote">"Addiction is anything that drains life of meaning while making it seem better."</p>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-trail"></div>
+    <nav class="navigation">
+      <a href="#" class="logo">
+        <header class="name">
+          <h1>Manu Choudhary</h1>
+        </header>
+      </a>
+      <ul class="nav-links">
+        <li class="link"><a href="#about">About</a></li>
+        <li class="link"><a href="#projects">Projects</a></li>
+        <li class="link"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Banner Section-->
+    <section class="banner">
+      <div class="headline">
+        <p><span class="colour">F</span>rontend</p>
+        <p>&nbsp; <span class="colour">D</span>eveloper</p>
       </div>
-      <div class="grid-item">
-        <p>FRONTEND ADDICT</p>
+      <div class="motion-banner">
+        <svg id="rotatingText" viewBox="0 0 200 200" width="130" height="300">
+          <defs>
+            <path
+              id="circle"
+              d="M 100, 100
+                m -75, 0
+                a 75, 75 0 1, 0 150, 0
+                a 75, 75 0 1, 0 -150, 0
+                "
+            ></path>
+          </defs>
+          <text width="400">
+            <textPath
+              alignment-baseline="top"
+              xlink:href="#circle"
+              class="text"
+            >
+              Scroll Down Scroll Down
+            </textPath>
+          </text>
+        </svg>
+        <div class="open-to-work">
+          <div>
+            <h3>Open to Work</h3>
+            <img
+              src="https://www.ewan-kerboas.fr/icons/asterisk.svg"
+              alt="asterisk"
+              class="object-contain animate-spin selected-projects-asterisk"
+              style="opacity: 1"
+            />
+          </div>
+          <h4>Based In INDIA</h4>
+        </div>
       </div>
-      <div class="grid-item">
-        <p class="quote">"Perfection is achieved not when there is nothing left to add, but when there is nothing left to take away."</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <p class="section-heading">About Me</p>
+      <p class="sub">Innovation Meets Imagination in Front-End Wizardry!</p>
+      <div class="experience-time"></div>
+      <div class="desc-section">
+        <div class="grid-item">
+          <p class="quote">
+            "Addiction is anything that drains life of meaning while making it
+            seem better."
+          </p>
+        </div>
+        <div class="grid-item">
+          <p>FRONTEND ADDICT</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">
+            "Perfection is achieved not when there is nothing left to add, but
+            when there is nothing left to take away."
+          </p>
+        </div>
+        <div class="grid-item">
+          <p>PIXEL PERFECT</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">"What makes woman is her great adaptability."</p>
+        </div>
+        <div class="grid-item">
+          <p>RESPONSIVE</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">
+            "An artist doesn't bend to reality, she invents it."
+          </p>
+        </div>
+        <div class="grid-item">
+          <p>GASP</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">"Creativity without strategy is called art."</p>
+        </div>
+        <div class="grid-item">
+          <p>CREATIVE CODER</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">
+            "Crafting Digital Dreams: Frontend Sorcerer Extraordinaire"
+          </p>
+        </div>
+        <div class="grid-item">
+          <p>I love discovering new creative worlds</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">"Practice makes perfect."</p>
+        </div>
+        <div class="grid-item">
+          <p>ACCESSIBLE</p>
+        </div>
+        <div class="grid-item">
+          <p class="quote">
+            "The best place to hide a dead body is page 2 of Google search
+            results"
+          </p>
+        </div>
+        <div class="grid-item">
+          <p>SEO</p>
+        </div>
       </div>
-      <div class="grid-item">
-        <p>PIXEL PERFECT</p>
+    </section>
+
+    <!-- Projects Section-->
+
+    <section class="projects" id="projects">
+      <div class="head">
+        <img
+          src="https://www.ewan-kerboas.fr/icons/asterisk.svg"
+          alt="asterisk"
+          class="object-contain animate-spin selected-projects-asterisk"
+          style="opacity: 1"
+        />
+        <h2>SELECTED WORKS</h2>
       </div>
-      <div class="grid-item">
-        <p class="quote">"What makes woman is her great adaptability."</p>
+      <ul class="project-items">
+        <li class="project-item">
+          <a class="project-heading" href="#">KIA GERMANY</a>
+          <div class="description">
+            significantly contribute to the advancement of the Kia Germany
+            website. Utilizing my proficiency in React for dynamic user
+            interfaces, AEM (Adobe Experience Manager) for comprehensive content
+            management, and SCSS for meticulous styling, I meticulously
+            collaborated towards achieving an impeccable user experience and
+            aesthetically refined design.
+          </div>
+        </li>
+        <li class="project-item">
+          <a class="project-heading" href="#">HYUNDAI EUROPE</a>
+          <div class="description">
+            Contributed significantly to the development of the Hyundai Europe
+            website. Leveraging my proficiency in React for dynamic user
+            interfaces, AEM (Adobe Experience Manager) for robust content
+            management, and SCSS for meticulous styling. This experience was
+            incredibly rewarding, culminating in outcomes that exceeded
+            expectations.
+          </div>
+        </li>
+      </ul>
+      <div class="head">
+        <img
+          src="https://www.ewan-kerboas.fr/icons/asterisk.svg"
+          alt="asterisk"
+          class="object-contain animate-spin selected-projects-asterisk"
+          style="opacity: 1"
+        />
+        <h2>PERSONAL PROJECTS</h2>
       </div>
-      <div class="grid-item">
-        <p>RESPONSIVE</p>
-      </div>
-      <div class="grid-item">
-        <p class="quote">"An artist doesn't bend to reality, she invents it."</p>
-      </div>
-      <div class="grid-item">
-        <p>GASP</p>
-      </div>
-      <div class="grid-item">
-        <p class="quote">"Creativity without strategy is called art."</p>
-      </div>
-      <div class="grid-item">
-        <p>CREATIVE CODER</p>
-      </div>
-      <div class="grid-item">
-        <p class="quote">"Crafting Digital Dreams: Frontend Sorcerer Extraordinaire"</p>
-      </div>
-      <div class="grid-item">
-        <p>I love discovering new creative worlds</p>
-      </div>
-      <div class="grid-item">
-        <p class="quote">"Practice makes perfect."</p>
-      </div>
-      <div class="grid-item">
-        <p>ACCESSIBLE</p>
-      </div>
-      <div class="grid-item">
-        <p class="quote">"The best place to hide a dead body is page 2 of Google search results"</p>
-      </div>
-      <div class="grid-item">
-        <p>SEO</p>
-      </div>
-    </div>
-  </section>
-  <script src="./index.js"></script>
-</body>
+      <ul class="project-items">
+        <li class="project-item">
+          <a class="project-heading" href="#">GROOVY SHADES</a>
+          <div class="description">
+            A dynamic React-based project in collaboration with SCSS, designed
+            to redefine your sports eyewear experience. This ongoing endeavor
+            invites you to explore an array of stylish and functional shades
+            tailored for various sporting activities. From sleek designs to
+            cutting-edge functionalities, Groovy Shades aims to blend fashion
+            with utility, offering users a personalized selection of eyewear
+            options.
+          </div>
+        </li>
+        <li class="project-item">
+          <a class="project-heading" href="#">TRAVEL ADDICT</a>
+          <div class="description">
+            A captivating project at the crossroads of React and SCSS, designed
+            exclusively for the travel enthusiasts. As a work-in-progress
+            venture within the travel agency domain, Travel Addict promises an
+            immersive experience, offering a curated selection of destinations,
+            itineraries, and travel essentials.
+          </div>
+        </li>
+      </ul>
+    </section>
+    <script src="./index.js"></script>
+  </body>
 </html>
