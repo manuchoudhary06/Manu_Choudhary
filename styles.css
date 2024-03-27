@@ -9,12 +9,42 @@ html {
           box-sizing: border-box;
 }
 
+.animate-spin {
+  -webkit-animation: rotation 3s linear infinite;
+          animation: rotation 3s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
+  cursor: none;
   background: #000;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   color: #fff;
   font-weight: normal;
+  position: relative;
+  padding: 0 5rem;
 }
 
 a {
@@ -22,17 +52,53 @@ a {
   color: #fff;
 }
 
+.cursor-trail {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.cursor-trail::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #970017;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  /* Animation for cursor ring */
+}
+
 .navigation {
   padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation .name h1 {
@@ -47,6 +113,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation ul.nav-links .link {
@@ -104,6 +173,43 @@ a {
           animation-iteration-count: infinite;
 }
 
+.banner .motion-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .motion-banner .open-to-work div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .motion-banner .open-to-work div h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.banner .motion-banner .open-to-work div img {
+  margin-left: 10px;
+}
+
+.banner .motion-banner .open-to-work h4 {
+  font-weight: 400;
+}
+
 @-webkit-keyframes rotate-circle {
   to {
     -webkit-transform: rotate(1turn);
@@ -120,7 +226,8 @@ a {
 
 .about {
   text-align: center;
-  margin-top: 40px;
+  margin: 10rem 0 10rem 0;
+  padding-bottom: 15rem;
 }
 
 .about p.section-heading {
@@ -205,6 +312,48 @@ a {
 }
 
 .about .desc-section .grid-item:active {
-  background-color: #d5d2cf;
+  background-color: #ff6600;
+}
+
+.projects .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 0rem;
+}
+
+.projects .head h2 {
+  font-weight: 300;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.projects .project-items {
+  list-style-type: none;
+}
+
+.projects .project-items .project-item {
+  border-bottom: 1px solid rgba(228, 229, 232, 0.2);
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+.projects .project-items .project-item .project-heading {
+  font-size: 4.5rem;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.projects .project-items .project-item .description {
+  font-size: 1.2rem;
+  text-align: justify;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 0;
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
