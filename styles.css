@@ -57,6 +57,7 @@ a {
   width: 5px;
   height: 5px;
   background-color: #fff;
+  /* Solid circle color */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -66,14 +67,18 @@ a {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /* Animation for cursor trail */
 }
 
 .cursor-trail::before {
   content: "";
   position: absolute;
   width: 50px;
+  /* Adjust ring size as needed */
   height: 50px;
+  /* Adjust ring size as needed */
   border: 2px solid #970017;
+  /* Ring color */
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -315,6 +320,10 @@ a {
   background-color: #ff6600;
 }
 
+.projects {
+  margin-bottom: 5rem;
+}
+
 .projects .head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,8 +353,12 @@ a {
 .projects .project-items .project-item .project-heading {
   font-size: 4.5rem;
   font-weight: 500;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+.projects .project-items .project-item .project-heading:hover + .description {
+  display: block;
 }
 
 .projects .project-items .project-item .description {
@@ -355,5 +368,137 @@ a {
   letter-spacing: 2px;
   padding: 20px 0;
   display: none;
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+.get-in-touch {
+  margin: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.get-in-touch .get-in-touch-button {
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.get-in-touch .get-in-touch-button a {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.get-in-touch .get-in-touch-button:hover {
+  background-color: #fff;
+}
+
+.get-in-touch .get-in-touch-button:hover a {
+  color: #000;
+}
+
+.get-in-touch .get-in-touch-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.get-in-touch .get-in-touch-links a {
+  font-size: 2rem;
+  padding: 5px;
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
+}
+
+.get-in-touch .get-in-touch-links a:hover {
+  color: #970017;
+}
+
+@media (max-width: 520px) {
+  .cursor-trail {
+    display: none;
+  }
+  body {
+    padding: 0;
+  }
+  .navigation {
+    padding: 20px;
+  }
+  .navigation .name h1 {
+    font-size: 1.5rem;
+  }
+  .navigation ul.nav-links .link {
+    font-size: 16px;
+  }
+  .banner .headline p {
+    font-size: 3rem;
+  }
+  .about {
+    margin: 0;
+    padding-bottom: 5rem;
+  }
+  .about p.section-heading {
+    width: 100%;
+  }
+  .about p.sub {
+    font-size: 18px;
+  }
+  .about .experience-time .exp {
+    font-size: 16px;
+  }
+  .about .experience-time .exp em {
+    font-size: 18px;
+  }
+  .about .desc-section .grid-item:nth-child(even) {
+    grid-column: span 12 / span 12;
+    font-size: 3.5rem;
+  }
+  .about .desc-section .grid-item:nth-child(odd) {
+    display: none;
+  }
+  .about .desc-section .grid-item:nth-child(odd) p .quote {
+    font-size: 10px;
+  }
+  .projects {
+    padding: 2rem;
+  }
+  .projects .project-items .project-item .project-heading {
+    font-size: 2rem;
+  }
+  .get-in-touch {
+    margin: 2rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .get-in-touch .get-in-touch-button a {
+    font-size: 2rem;
+  }
+  .get-in-touch .get-in-touch-links {
+    margin-top: 20px;
+  }
+  .get-in-touch .get-in-touch-links a {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

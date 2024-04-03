@@ -43,18 +43,18 @@ a {
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: #fff; 
+  background-color: #fff; /* Solid circle color */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease; /* Animation for cursor trail */
   &::before {
     content: "";
     position: absolute;
-    width: 50px; 
-    height: 50px; 
-    border: 2px solid $color; 
+    width: 50px; /* Adjust ring size as needed */
+    height: 50px; /* Adjust ring size as needed */
+    border: 2px solid $color; /* Ring color */
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -232,6 +232,7 @@ a {
 // Projects Section
 
 .projects {
+  margin-bottom: 5rem;
   .head {
     display: flex;
     align-items: center;
@@ -251,7 +252,12 @@ a {
       .project-heading {
         font-size: 4.5rem;
         font-weight: 500;
-        transition: 0.3s ease;
+        transition: 3s ease;
+        &:hover {
+          + .description {
+            display: block;
+          }
+        }
       }
       .description {
         font-size: 1.2rem;
@@ -260,6 +266,130 @@ a {
         letter-spacing: 2px;
         padding: 20px 0;
         display: none;
+        transition: 3s ease;
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  margin: 10rem 0;
+  @include displayProps();
+  .get-in-touch-button {
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    a {
+      font-size: 3.5rem;
+      font-weight: 500;
+    }
+    &:hover {
+      background-color: #fff;
+      a {
+        color: #000;
+      }
+    }
+  }
+  .get-in-touch-links {
+    @include displayProps();
+    flex-direction: column;
+    a {
+      font-size: 2rem;
+      padding: 5px;
+      transition: 3s ease;
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+}
+
+//Media Query
+
+@media (max-width: 520px) {
+  .cursor-trail{
+    display: none;
+  }
+  body {
+    padding: 0;
+  }
+  .navigation {
+    padding: 20px;
+    .name {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+    ul.nav-links {
+      .link {
+        font-size: 16px;
+      }
+    }
+  }
+  .banner {
+    .headline {
+      p {
+        font-size: 3rem;
+      }
+    }
+  }
+  .about {
+    margin: 0;
+    padding-bottom: 5rem;
+    p.section-heading {
+      width: 100%;
+    }
+    p.sub {
+      font-size: 18px;
+    }
+    .experience-time {
+      .exp {
+        font-size: 16px;
+        em {
+          font-size: 18px;
+        }
+      }
+    }
+    .desc-section {
+      .grid-item {
+        &:nth-child(even) {
+          grid-column: span 12 / span 12;
+          font-size: 3.5rem;
+        }
+        &:nth-child(odd) {
+          display: none;
+          p {
+            .quote {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .projects {
+    padding: 2rem;
+    .project-items {
+      .project-item {
+        .project-heading {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .get-in-touch {
+    margin: 2rem 0;
+    flex-direction: column;
+    .get-in-touch-button {
+      a {
+        font-size: 2rem;
+      }
+    }
+    .get-in-touch-links {
+      margin-top: 20px;
+      a {
+        font-size: 1.5rem;
       }
     }
   }
