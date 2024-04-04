@@ -22,8 +22,9 @@ window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
 
   gridItems.forEach(function (item, index) {
-    const offsetTop = item.offsetTop;
-    const offsetBottom = offsetTop + item.offsetHeight;
+    const offsetReduction = 70; // Amount to reduce the offsets by
+    const offsetTop = item.offsetTop - offsetReduction;
+    const offsetBottom = offsetTop + item.offsetHeight - offsetReduction;
     const text = item.querySelector("p");
     const quote = item.querySelector(".quote");
 
